@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("t2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    min-height: 400px;
+    padding: 30px;
+    background: transparent;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.input-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.todo-input {
+    flex: 1;
+    outline: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid palevioletred;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.todo-input::placeholder {
+    color: white;
+}
+
+.add-butt {
+    border: none;
+    outline: none;
+    background: palevioletred;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; /* Add space between buttons */
+}
+
+.add-butt i {
+    font-size: 20px;
+}
+
+.todo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: plum;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 2px solid palevioletred;
+    transition: all 0.2s ease;
+}
+
+.todo:first-child {
+    margin-top: 0;
+}
+
+.todo:last-child {
+    margin-bottom: 0;
+}
+
+.todo:hover {
+    background-color: palevioletred;
+}
+
+.todo label {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.todo span {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 2px solid palevioletred;
+}
+
+input[type='checkbox'] {
+    visibility: hidden;
+}
+
+input:checked + span {
+    text-decoration: line-through;
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before {
+    background: url();
+    border-color: greenyellow;
+}
+
+.todo:hover span::before {
+    border-color: white;
+}
+
+.todo .del-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-left: 10px; /* Add space between buttons */
+    padding-right: 10px; /* Add padding to move the button inside the box */
+}
+
+.todos-con {
+    height: 300px;
+    overflow: overlay;
+}
+
+.todo-con::-webkit-scrollbar-track {
+    background: rgb(247, 247, 247);
+    border-radius: 20px;
+}
+
+.todo-con::-webkit-scrollbar {
+    width: 0;
+}
+
+.todo-con:hover::-webkit-scrollbar {
+    width: 7px;
+}
+
+.todo-con::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filter {
+    color: white;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid palevioletred;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-right: 10px; /* Add space between buttons */
+}
+
+.filter.active, .filter:hover {
+    background-color: palevioletred;
+}
+
+.delete-all {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid palevioletred;
+    border-radius: 100px;
+    margin-left: 10px; /* Add space between buttons */
+}
+
+.delete-all:hover {
+    background-color: palevioletred;
+}
+.todo .edit-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-left: 5px; /* Add space between buttons */
+    margin-right: -350px; /* Adjust the negative margin to move the button closer */
+    padding-right: 10px; /* Add padding to move the button inside the box */
+}
+
